@@ -1,0 +1,12 @@
+[submodule "opencode"]
+	path = opencode
+	url = ./opencode
+[submodule "opencode_bug-tui-web-token-mismatch"]
+	path = opencode_bug-tui-web-token-mismatch
+	url = ./opencode_bug-tui-web-token-mismatch
+[submodule "opencode_devops-3415-windows-virus-false-positive"]
+	path = opencode_devops-3415-windows-virus-false-positive
+	url = ./opencode_devops-3415-windows-virus-false-positive
+[submodule "opencode_err-hacks"]
+	path = opencode_err-hacks
+	url = ./opencode_err-hacks
