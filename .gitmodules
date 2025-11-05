@@ -10,3 +10,6 @@
 [submodule "opencode_err-hacks"]
 	path = opencode_err-hacks
 	url = ./opencode_err-hacks
+[submodule "feat/lsp-sdk"]
+	path = feat/lsp-sdk
+	url = https://github.com/riatzukiza/stt
