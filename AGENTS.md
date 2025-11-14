@@ -45,7 +45,7 @@ pnpm test                # Verify bug resolution
 ## Cross-Repository Integration
 
 ### Related Tools
-- **[opencode-openai-codex-auth](../opencode-openai-codex-auth/)**: Plugin development and testing
+- **[open-hax/codex](../open-hax/codex/)**: Plugin development and testing
 - **[opencode-hub](../opencode-hub/)**: Package management and distribution
 - **[promethean](../promethean/)**: Agent enhancement and orchestration
 - **[agent-shell](../agent-shell/)**: Development workflow integration
@@ -56,7 +56,7 @@ pnpm test                # Verify bug resolution
 - **[Repository Index](../REPOSITORY_INDEX.md)** - Complete repository overview
 
 ### Integration Patterns
-1. **Plugin Development**: Use branches for testing opencode-openai-codex-auth
+1. **Plugin Development**: Use branches for testing open-hax/codex
 2. **Feature Development**: Isolate experimental features in dedicated branches
 3. **Bug Testing**: Separate branches for specific issue resolution
 4. **Distribution**: Use opencode-hub for package management
@@ -76,7 +76,7 @@ pnpm test                # Verify bug resolution
 ### opencode_bug-tui-web-token-mismatch
 - **Purpose**: Fix TUI web token authentication issues
 - **Focus**: Authentication flow and token management
-- **Related**: Uses patterns from opencode-openai-codex-auth
+- **Related**: Uses patterns from open-hax/codex
 
 ### opencode_devops-3415-windows-virus-false-positive
 - **Purpose**: Windows compatibility and antivirus false positives
@@ -99,7 +99,7 @@ pnpm test                # Verify bug resolution
 
 ### Plugin Development
 - Use branches for testing new plugin features
-- Integrate with opencode-openai-codex-auth patterns
+- Integrate with open-hax/codex patterns
 - Test authentication and request flows
 
 ### Language Support

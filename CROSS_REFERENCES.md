@@ -21,9 +21,9 @@ This document provides comprehensive cross-references to all related repositorie
   - **Integration**: Interactive development workflow for OpenCode branches
 
 #### **Authentication & Security**
-- **[opencode-openai-codex-auth](https://github.com/numman-ali/opencode-openai-codex-auth)** - OpenAI Codex OAuth authentication plugin
-  - [AGENTS.md](https://github.com/numman-ali/opencode-openai-codex-auth/blob/main/AGENTS.md)
-  - [README.md](https://github.com/numman-ali/opencode-openai-codex-auth/blob/main/README.md)
+- **[open-hax/codex](https://github.com/open-hax/codex)** - OpenAI Codex OAuth authentication plugin
+  - [AGENTS.md](https://github.com/open-hax/codex/blob/main/AGENTS.md)
+  - [README.md](https://github.com/open-hax/codex/blob/main/README.md)
   - **Integration**: Authentication patterns for OpenCode plugin development
 
 ### 🔧 Tooling & SDK Dependencies
@@ -64,14 +64,14 @@ This document provides comprehensive cross-references to all related repositorie
 
 ### **opencode (main branch)**
 #### **Core Dependencies**
-- **Authentication**: [opencode-openai-codex-auth](https://github.com/numman-ali/opencode-openai-codex-auth) for OAuth flows
+- **Authentication**: [open-hax/codex](https://github.com/open-hax/codex) for OAuth flows
 - **Agent Testing**: [promethean](https://github.com/riatzukiza/promethean) for automated testing
 - **Development**: [agent-shell](https://github.com/riatzukiza/agent-shell) for interactive development
 
 #### **Integration Commands**
 ```bash
 # Test with authentication plugin
-cd ../opencode-openai-codex-auth && pnpm build && cp dist/* ../stt/opencode/plugins/
+cd ../open-hax/codex && pnpm build && cp dist/* ../stt/opencode/plugins/
 
 # Agent-based testing
 cd ../promethean && pnpm --filter @promethean-os/agent test
@@ -99,14 +99,14 @@ bun dev  # with Clojure files for testing
 
 ### **opencode_bug-tui-web-token-mismatch**
 #### **Authentication Focus**
-- **Primary**: [opencode-openai-codex-auth](https://github.com/numman-ali/opencode-openai-codex-auth) for token management
+- **Primary**: [open-hax/codex](https://github.com/open-hax/codex) for token management
 - **Testing**: [promethean](https://github.com/riatzukiza/promethean) agents for authentication flow testing
 - **Development**: [agent-shell](https://github.com/riatzukiza/agent-shell) for debugging
 
 #### **Token Management Testing**
 ```bash
 # Authentication plugin development
-cd ../opencode-openai-codex-auth
+cd ../open-hax/codex
 pnpm test && pnpm build
 
 # Test token mismatch fixes
@@ -139,7 +139,7 @@ cd ../openai/codex && cargo build --target x86_64-pc-windows-msvc
 
 ### **Plugin Development Workflow**
 1. **Prototype**: Use STT branches for rapid prototyping
-2. **Authenticate**: Integrate [opencode-openai-codex-auth](https://github.com/numman-ali/opencode-openai-codex-auth) patterns
+2. **Authenticate**: Integrate [open-hax/codex](https://github.com/open-hax/codex) patterns
 3. **Test**: Use [promethean](https://github.com/riatzukiza/promethean) agents for automated testing
 4. **Distribute**: Package through [opencode-hub](https://github.com/riatzukiza/devel/tree/main/opencode-hub)
 
@@ -163,7 +163,7 @@ cd ../openai/codex && cargo build --target x86_64-pc-windows-msvc
 cd ../promethean && pnpm build
 cd ../agent-shell && emacs agent-shell.el
 cd ../clojure-mcp && pnpm install
-cd ../opencode-openai-codex-auth && pnpm build
+cd ../open-hax/codex && pnpm build
 
 # STT branch development
 cd opencode && bun dev
@@ -176,7 +176,7 @@ cd opencode_bug-tui-web-token-mismatch && bun dev
 # Cross-repository testing
 cd ../promethean && pnpm --filter @promethean-os/test-runner run --suite stt-integration
 cd ../clojure-mcp && pnpm test --integration
-cd ../opencode-openai-codex-auth && pnpm test --e2e
+cd ../open-hax/codex && pnpm test --e2e
 ```
 
 ## 🎯 Decision Trees for Agents
@@ -184,12 +184,12 @@ cd ../opencode-openai-codex-auth && pnpm test --e2e
 ### **Choosing Development Branch**
 - **Core OpenCode development?** → `opencode` branch
 - **Clojure language support?** → `opencode-feat-clojure-syntax-highlighting` + [clojure-mcp](https://github.com/bhauman/clojure-mcp)
-- **Authentication issues?** → `opencode_bug-tui-web-token-mismatch` + [opencode-openai-codex-auth](https://github.com/numman-ali/opencode-openai-codex-auth)
+- **Authentication issues?** → `opencode_bug-tui-web-token-mismatch` + [open-hax/codex](https://github.com/open-hax/codex)
 - **Windows compatibility?** → `opencode_devops-3415-windows-virus-false-positive` + [dotfiles](https://github.com/riatzukiza/devel/tree/main/dotfiles)
 - **Error handling improvements?** → `opencode_err-hacks` + all repositories
 
 ### **Integration Complexity**
-- **Simple**: Single branch + [opencode-openai-codex-auth](https://github.com/numman-ali/opencode-openai-codex-auth)
+- **Simple**: Single branch + [open-hax/codex](https://github.com/open-hax/codex)
 - **Medium**: Branch + [promethean](https://github.com/riatzukiza/promethean) + [agent-shell](https://github.com/riatzukiza/agent-shell)
 - **Complex**: Multiple branches + full ecosystem integration
 
